@@ -11,9 +11,8 @@ export const bubbleSort = (arr) => {
                 let aux = arr[index];
                 arr[index] = arr[index + 1];
                 arr[index + 1] = aux;
-
-                // Agregar la representación del estado actual al template
-                template.push(arr.map(item => `${item.number} (${item.icon})`).join(", "));
+                template.push(arr.map(item => ({ number: item.number, icon: item.icon })));
+                console.log(template)
             }
             index++;
         }
@@ -21,8 +20,6 @@ export const bubbleSort = (arr) => {
     }
 
     reversedArray = template.reverse();
-    console.log(reversedArray);
-
     return arr;
 };
 
