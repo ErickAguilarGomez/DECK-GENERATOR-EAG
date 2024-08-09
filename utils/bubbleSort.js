@@ -12,7 +12,6 @@ export const bubbleSort = (arr) => {
                 arr[index] = arr[index + 1];
                 arr[index + 1] = aux;
                 template.push(arr.map(item => ({ number: item.number, icon: item.icon })));
-                console.log(template)
             }
             index++;
         }
